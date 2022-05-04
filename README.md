@@ -1,6 +1,15 @@
-# Mods
-This repository lists the mods I have done for various games.
+# Warcraft III mods
 
-I have categorized the mods by game to own branches. Mod files will be found there.
+This branch lists my mods and maps I have done for Warcraft III: Reforged.
 
-For some games, such as Warcraft III, mods are not as straight-forward text files, so I have exported the code from the game file here.
+---
+
+Combined Camera Slider System
+  - A mod that adds a highly controllable camera to the game with extra UI elements. It has extra functionalities like increased zooming, panning and changing the angle  of the camera. It even adds a customizable third person camera, even though the game is from an isometric perspective.
+
+    Hive Workshop link: https://www.hiveworkshop.com/threads/combined-camera-slider-system.321336/
+
+Explosive Blast
+  - A simpler mod that adds a new ability to the game. New abilities can be added via the in-game editing tools, but this is a bit more complicated, thus, it uses the more advanced “trigger editor”. It allows modders to make mods without actual scripting, although the code underneath works just the same.
+	
+    Hive Workshop link: https://www.hiveworkshop.com/threads/explosive-blast.315432/

@@ -14,7 +14,7 @@ This branch includes the mods I have done for Crusader Kings III
   _Steam Workshop link: https://steamcommunity.com/sharedfiles/filedetails/?id=2329801599_
 
 ### Immersive Lay with Partner
-- The mod is certainly not as dirty as it sounds. As mentioned above, the game uses these “events”, to which the player needs to react to. This mod then just adds a kind of roleplaying-style of conversation between the player character and their spouse, which can lead to certain results.
+- The mod is certainly not as dirty as it sounds. As mentioned above, the game uses these “events”, to which the player needs to react. This mod then just adds a kind of roleplaying-style of conversation between the player character and their spouse, which can lead to certain results.
 	
   _Steam Workshop link: https://steamcommunity.com/sharedfiles/filedetails/?id=2609216562_
 

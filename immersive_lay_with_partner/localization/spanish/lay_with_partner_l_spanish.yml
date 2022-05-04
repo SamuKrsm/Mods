@@ -1,0 +1,211 @@
+﻿l_spanish:
+# generales
+laid_with_opinion:0 "Halagado por mi afecto"
+laid_with_success_opinion:0 "Aprecio mi esfuerzo por amor"
+laid_with_unsuccess_opinion:0 "Rechacé mi intento de acostarme con ellos"
+lay_with_woman_interaction:0 "Acostarse con"
+lay_with_woman_interaction_desc:0 "Intenta acostarte con [recipient.GetShortUINameNoTooltip]"
+lay_with_woman_nopregnancy_interaction:0 "Acostarse con"
+lay_with_woman_nopregnancy_interaction_desc:0 "Intenta acostarte con [recipient.GetShortUINameNoTooltip]"
+lay_with_man_interaction:0 "Acostarse con"
+lay_with_man_interaction_desc:0 "Intenta acostarte con [recipient.GetShortUINameNoTooltip]"
+lay_with_man_nopregnancy_interaction:0 "Acostarse con"
+lay_with_man_nopregnancy_interaction_desc:0 "Intenta acostarte con [recipient.GetShortUINameNoTooltip]"
+lay_with_partner_aibehavior_lustful_tt:0 "[destinatario.GetSheHe|U] es lujurioso: $VALOR|=+0$"
+lay_with_partner_aibehavior_chaste_tt:0 "[destinatario.GetSheHe|U] es casto: $VALOR|=+0$"
+lay_with_partner_aibehavior_impotentme_tt:0 "Soy impotente: $VALOR|=+0$"
+lay_with_partner_aibehavior_impotentthey_tt:0 "[recipient.GetSheHe|U] es impotente: $VALUE|=+0$"
+lay_with_partner_aibehavior_illme_tt:0 "Estoy enfermo: $VALOR|=+0$"
+lay_with_partner_aibehavior_illthey_tt:0 "[recipient.GetSheHe|U] está enfermo: $VALUE|=+0$"
+lay_with_partner_aibehavior_pneumonicme_tt:0 "Tengo neumonía: $VALUE|=+0$"
+lay_with_partner_aibehavior_pneumonicthey_tt:0 "[recipient.GetSheHe|U] tiene neumonía: $VALUE|=+0$"
+lay_with_partner_aibehavior_loverspoxme_tt:0 "Tengo viruela del amante: $VALUE|=+0$"
+lay_with_partner_aibehavior_loverspoxthey_tt:0 "[recipient.GetSheHe|U] tiene viruela del amante: $VALUE|=+0$"
+lay_with_partner_aibehavior_celibateme_tt:0 "Estoy en celibato: $VALOR|=+0$"
+lay_with_partner_aibehavior_celibatethey_tt:0 "[recipient.GetSheHe|U] está en celibato: $VALUE|=+0$"
+lay_with_partner_aibehavior_pregnantme_tt:0 "Estoy embarazada: $VALOR|=+0$"
+lay_with_partner_aibehavior_pregnantthey_tt:0 "Está embarazada: $VALOR|=+0$"
+lay_with_partner_aibehavior_amking_tt:0 "Respeto por su título de [actor.GetTitleTierName]: $VALUE|=+0$"
+lay_with_partner_chance_tt_pos:0 "El plan tiene éxito."
+lay_with_partner_chance_tt_neu:0 "Resultados aceptables."
+lay_with_partner_chance_tt_neg:0 "Estás rechazado".
+lay_with_partner_result.tt:0 "Te acuestas con [recipient.GetShortUINameNoTooltip]."
+lay_with_partner_result_pregnancy.tt:0 "#emphasis (la oportunidad final se basa en la fertilidad)#!"
+
+# acuesta con hembra
+lay_with_woman.01.t:0 "Acostarte con tu pareja: Preparativos"
+lay_with_woman.01.desc:0 "Estoy planeando llevar a [recipient.GetShortUINameNoTooltip] a la cama conmigo. Ahora, ¿cómo debo continuar...\n\nTal vez la espere en la cama cámara con nada más que una rosa entre los dientes. ¡Es hora de divertirnos un poco!\n\n¡O simplemente debería arrastrarla al dormitorio, atarlo y darle un paseo rudo!\n\nTambién podría decorar el toda la habitación con cientos de velas y esperar la luz de la luna perfecta. ¡Un regalo además de eso seguramente será suficiente!\n\nPor otra parte, podría simplemente preguntárselo esta noche en la cama. Estamos haciendo bebés aquí, después de todo."
+lay_with_woman.01.a:0 "¡Iré a buscar la rosa!"
+lay_with_woman.01.a.text:0 "Probabilidad reducida de quedar embarazada"
+lay_with_woman.01.b:0 "¡Ella está lista para un viaje difícil!"
+lay_with_woman.01.c:0 "Iré con velas, luz de luna y regalos."
+lay_with_woman.01.d:0 "Debería preguntar."
+lay_with_woman.01.d.text:0 "Mayor probabilidad de quedar embarazada"
+lay_with_woman.01.e:0 "Cambié de opinión."
+# Rosa
+lay_with_woman.02.t:0 "Acostarte con tu pareja: ¡éxito!"
+lay_with_woman.02.desc:0 "\"¡Oh! ¿Qué es esto?\" guiña un ojo sonriendo, \"Me gusta a dónde va esto...\""
+lay_with_woman.02.a:0 "\"¡Ven aquí, tú!\""
+lay_with_woman.03.t:0 "Acostarte con tu pareja: resultado aceptable"
+lay_with_woman.03.desc:0 "\"¿Qué es esto?\" se sorprende. \"¡Oh, ya veo! Bueno, claro, ¿por qué no?\", se encoge de hombros."
+lay_with_woman.03.a:0 "\"No es el entusiasmo que esperaba. Pero, claro, hagámoslo.\""
+lay_with_woman.04.t:0 "Acostarse con su pareja: negativa"
+lay_with_woman.04.desc:0 "\"¿De verdad?\" no estaba contenta con la sorpresa. \"No tengo tiempo para esto\", dice."
+lay_with_woman.04.a:0 "\"Bien.\""
+# Áspero
+lay_with_woman.05.t:0 "Acostarte con tu pareja: ¡éxito!"
+lay_with_woman.05.desc:0 "La arrastré hasta el dormitorio, la até a los pies de la cama y la follé hasta dejarla sin sentido. Sus gritos deben haber resonado por todos los pasillos durante toda la noche."
+lay_with_woman.05.a:0 "Espero que [ROOT.Char.GetFaith.HighGodName] no nos haya escuchado con demasiada atención..."
+lay_with_woman.06.t:0 "Acostarte con tu pareja: buenos resultados"
+lay_with_woman.06.desc:0 "Me sigue hasta el dormitorio sin saber qué esperar. Una vez que se le ocurre la idea, duda un poco: \"Está bien, pero no seas demasiado duro conmigo, por favor?\""
+lay_with_woman.06.a:0 "Por supuesto, tomémoslo con calma."
+lay_with_woman.07.t:0 "Acostarte con tu pareja: fracaso"
+lay_with_woman.07.desc:0 "\"¿Adónde crees que me llevas?\" gruñe y no quiere seguirme. Le explico mi plan, pero no ayuda. \"¿En serio? Eso no suena nada divertido en este momento\", dice ella."
+lay_with_woman.07.a:0 "Al menos lo intenté."
+# Regalo
+lay_with_woman.08.t:0 "Acostarse con su pareja: ¡Encantado!"
+lay_with_woman.08.desc:0 "\"¡Oh, no! ¡Esto se ve increíble!\", ella se llena de alegría. Luego le muestro el regalo que le compré. \"¡No! ¡No deberías haberlo hecho!\" ella se derrite en mis brazos."
+lay_with_woman.08.a:0 "Pasamos una noche increíble juntos."
+lay_with_woman.09.t:0 "Acostarse con su pareja: Sorprendido"
+lay_with_woman.09.desc:0 "\"¿Qué es esto? ¿Velas?\", reflexiona. \"¡Oh, ya veo! Bueno, seguro. Te lo daré solo por el esfuerzo que hiciste.\""
+lay_with_woman.09.a:0 "No es exactamente la reacción que esperaba, pero lo aceptaré".
+lay_with_woman.10.t:0 "Acostarte con tu pareja: poco impresionado"
+lay_with_woman.10.desc:0 "\"¿Ugh?\" ella suspira, \"Creo que es un poco demasiado, ¿no? ¿Quizás la próxima vez no te esfuerces tanto?\"\n\n\"Pero aceptaré el regalo\", sonríe."
+lay_with_woman.10.a:0 "Sí, seguro. Limpiaré esto".
+# Preguntar
+lay_with_woman.11.t:0 "Acostarse con su pareja: De acuerdo"
+lay_with_woman.11.desc:0 "\"¿Un bebé, dices? ¡Sí! ¡Yo también quiero un bebé ahora mismo!\""
+lay_with_woman.11.a:0 "¿En serio? ¡Sí, hagámoslo!"
+lay_with_woman.12.t:0 "Acostarse con su pareja: Acepta"
+lay_with_woman.12.desc:0 "\"¿Quieres tener un bebé ahora?\" pregunta ella. \"Bien, solo hazlo rápido\""
+lay_with_woman.12.a:0 "¡Eso no será un problema!"
+lay_with_woman.13.t:0 "Acostarte con tu pareja: niega"
+lay_with_woman.13.desc:0 "\"¿Quieres hacer bebés? ¿Ahora? ¿No pudiste mencionar esto antes?\", me regaña, \"estoy cansada. Vamos a dormir.\""
+lay_with_woman.13.a:0 "Bien".
+
+# Pone con macho
+lay_with_man.01.t:0 "Acostarte con tu pareja: Preparativos"
+lay_with_man.01.desc:0 "Estoy planeando llevar a [recipient.GetShortUINameNoTooltip] a la cama conmigo. Ahora, ¿cómo debo continuar con eso...\n\nTal vez lo espere en la cama cámara con nada más que una rosa entre los dientes. ¡Es hora de divertirnos un poco!\n\n¡O simplemente debería arrastrarlo al dormitorio, atarlo y darle un paseo rudo!\n\nTambién podría decorar el toda la habitación con cientos de velas y esperar la luz de la luna perfecta. ¡Un regalo además de eso seguramente será suficiente!\n\nPor otra parte, podría simplemente preguntárselo esta noche en la cama. Estamos haciendo bebés aquí, después de todo."
+lay_with_man.01.a:0 "¡Iré a buscar la rosa!"
+lay_with_man.01.a.text:0 "Probabilidad reducida de quedar embarazada"
+lay_with_man.01.b:0 "¡Está preparado para un viaje difícil!"
+lay_with_man.01.c:0 "Iré con velas, luz de luna y regalos."
+lay_with_man.01.d:0 "Debería preguntar."
+lay_with_man.01.d.text:0 "Mayor probabilidad de quedar embarazada"
+lay_with_man.01.e:0 "Cambié de opinión."
+# Rosa
+lay_with_man.02.t:0 "Lay with Partner: ¡éxito!"
+lay_with_man.02.desc:0 "\"¡Oh! ¿Qué es esto?\" guiña un ojo sonriendo, \"Me gusta a dónde va esto...\""
+lay_with_man.02.a:0 "\"¡Te mostraré!\""
+lay_with_man.03.t:0 "Acostarte con tu pareja: resultado aceptable"
+lay_with_man.03.desc:0 "\"¿Qué es esto?\" se sorprende. \"¡Oh, ya veo! Bueno, claro, ¿por qué no?\", se encoge de hombros."
+lay_with_man.03.a:0 "\"No es el entusiasmo que esperaba. Pero, claro, hagámoslo.\""
+lay_with_man.04.t:0 "Acostarse con su pareja: rechazo"
+lay_with_man.04.desc:0 "\"¿En serio?\" no estaba contento con la sorpresa. \"No tengo tiempo para esto\", dice."
+lay_with_man.04.a:0 "\"Bien.\""
+# Áspero
+lay_with_man.05.t:0 "Lay with Partner: ¡éxito!"
+lay_with_man.05.desc:0 "Lo arrastré hasta el dormitorio, lo até a los pies de la cama y lo monté como si estuviera en el entrenamiento de justas. Sus gritos resonaron por todos los pasillos durante toda la noche".
+lay_with_man.05.a:0 "Espero que [ROOT.Char.GetFaith.HighGodName] no nos escuche con demasiada atención..."
+lay_with_man.06.t:0 "Acostarte con tu pareja: buenos resultados"
+lay_with_man.06.desc:0 "Me sigue hasta el dormitorio sin saber qué esperar. Una vez que se le ocurre la idea, duda un poco: \"Está bien, pero no seas demasiado duro conmigo, por favor?\" "
+lay_with_man.06.a:0 "Por supuesto, tomémoslo con calma."
+lay_with_man.07.t:0 "Acostarse con su pareja: fracaso"
+lay_with_man.07.desc:0 "\"¿Adónde crees que me llevas?\" gruñe y no quiere seguirme. Le explico mi plan, pero no ayuda. \"¿En serio? Eso no suena nada divertido en este momento\", dice."
+lay_with_man.07.a:0 "Al menos lo intenté."
+# Regalo
+lay_with_man.08.t:0 "Lay with Partner: ¡Encantado!"
+lay_with_man.08.desc:0 "\"¡Oh, no! ¡Esto se ve increíble!\", se llena de alegría. Luego le muestro el regalo que le compré. \"¡No! ¡No deberías haberlo hecho!\" se derrite en mis brazos."
+lay_with_man.08.a:0 "Pasamos una noche increíble juntos."
+lay_with_man.09.t:0 "Acostarse con su pareja: Sorprendido"
+lay_with_man.09.desc:0 "\"¿Qué es esto? ¿Velas?\", reflexiona. \"¡Oh, ya veo! Bueno, seguro. Te lo daré solo por el esfuerzo que hiciste.\""
+lay_with_man.09.a:0 "No es exactamente la reacción que esperaba, pero lo aceptaré".
+lay_with_man.10.t:0 "Acostarte con tu pareja: poco impresionado"
+lay_with_man.10.desc:0 "\"¿Ugh?\" suspira, \"Creo que es demasiado, ¿no? ¿Quizás la próxima vez no te esfuerces tanto?\"\n\n\"Pero tomaré el regalo\", sonríe."
+lay_with_man.10.a:0 "Sí, seguro. Limpiaré esto".
+# Preguntar
+lay_with_man.11.t:0 "Acostarse con su pareja: De acuerdo"
+lay_with_man.11.desc:0 "\"¿Un bebé, dices? ¡Sí! ¡Yo también quiero un bebé ahora mismo!\""
+lay_with_man.11.a:0 "¿En serio? ¡Sí, hagámoslo!"
+lay_with_man.12.t:0 "Acostarse con su pareja: Acepta"
+lay_with_man.12.desc:0 "\"¿Quieres tener un bebé ahora?\" pregunta. \"Bien, pero sin juegos previos\""
+lay_with_man.12.a:0 "Claro, estoy listo."
+lay_with_man.13.t:0 "Acostarte con tu pareja: niega"
+lay_with_man.13.desc:0 "\"¿Quieres hacer bebés? ¿Ahora? ¿No pudiste sacar el tema antes?\", me regaña, \"estoy cansado. Vamos a dormir.\""
+lay_with_man.13.a:0 "Bien".
+
+# Pone con macho sin preñez
+lay_with_man_nopregnancy.01.t:0 "Acostarte con tu pareja: Preparativos"
+lay_with_man_nopregnancy.01.desc:0 "Estoy planeando llevar a [recipient.GetShortUINameNoTooltip] a la cama conmigo. Ahora, ¿cómo debo continuar con eso...\n\nTal vez lo espere en la cama cámara con nada más que una rosa entre los dientes. ¡Es hora de divertirnos un poco!\n\n¡O simplemente debería arrastrarlo al dormitorio, atarlo y darle un paseo rudo!\n\nTambién podría decorar el toda la habitación con cientos de velas, y espera la luz de la luna perfecta. ¡Un regalo además de eso seguramente hará el truco!"
+lay_with_man_nopregnancy.01.a:0 "¡Iré a buscar la rosa!"
+lay_with_man_nopregnancy.01.b:0 "¡Está preparado para un viaje difícil!"
+lay_with_man_nopregnancy.01.c:0 "Iré con velas, luz de luna y regalos."
+lay_with_man_nopregnancy.01.e:0 "Cambié de opinión."
+# Rosa
+lay_with_man_nopregnancy.02.t:0 "Acostarte con tu pareja: ¡éxito!"
+lay_with_man_nopregnancy.02.desc:0 "\"¡Oh! ¿Qué es esto?\" guiña un ojo sonriendo, \"Me gusta a dónde va esto...\""
+lay_with_man_nopregnancy.02.a:0 "\"¡Te mostraré!\""
+lay_with_man_nopregnancy.03.t:0 "Acostarte con tu pareja: resultado aceptable"
+lay_with_man_nopregnancy.03.desc:0 "\"¿Qué es esto?\" está sorprendido. \"¡Oh, ya veo! Bueno, claro, ¿por qué no?\", se encoge de hombros."
+lay_with_man_nopregnancy.03.a:0 "\"No es el entusiasmo que esperaba. Pero, claro, hagámoslo.\""
+lay_with_man_nopregnancy.04.t:0 "Acostarse con su pareja: negativa"
+lay_with_man_nopregnancy.04.desc:0 "\"¿En serio?\" no está contento con la sorpresa. \"No tengo tiempo para esto\", dice."
+lay_with_man_nopregnancy.04.a:0 "\"Bien.\""
+# Áspero
+lay_with_man_nopregnancy.05.t:0 "Acostarte con tu pareja: ¡éxito!"
+lay_with_man_nopregnancy.05.desc:0 "Lo arrastro hasta el dormitorio, lo ato a los pies de la cama y lo monto como si estuviera en el entrenamiento de justas. Sus gritos deben haber resonado por todos los pasillos durante toda la noche".
+lay_with_man_nopregnancy.05.a:0 "Espero que [ROOT.Char.GetFaith.HighGodName] no nos haya escuchado con demasiada atención..."
+lay_with_man_nopregnancy.06.t:0 "Acostarte con tu pareja: buenos resultados"
+lay_with_man_nopregnancy.06.desc:0 "Me siguió hasta el dormitorio sin saber qué esperar. Una vez que se le ocurrió la idea, dudó un poco al principio: \"Está bien, pero no seas demasiado duro conmigo, por favor? \""
+lay_with_man_nopregnancy.06.a:0 "Por supuesto, tomémoslo con calma."
+lay_with_man_nopregnancy.07.t:0 "Acostarse con su pareja: fracaso"
+lay_with_man_nopregnancy.07.desc:0 "\"¿Adónde crees que me llevas?\" gruñe y no quiere seguirme. Le explico mi plan, pero no ayuda. \"¿En serio? Eso no suena nada divertido en este momento\", dice."
+lay_with_man_nopregnancy.07.a:0 "Al menos lo intenté."
+# Regalo
+lay_with_man_nopregnancy.08.t:0 "Acostarte con tu pareja: ¡Encantado!"
+lay_with_man_nopregnancy.08.desc:0 "\"¡Oh, no! ¡Esto se ve increíble!\", se llena de alegría. Luego le muestro el regalo que le compré. \"¡No! ¡No deberías haberlo hecho!\" se derrite en mis brazos."
+lay_with_man_nopregnancy.08.a:0 "Pasamos una noche increíble juntos".
+lay_with_man_nopregnancy.09.t:0 "Acostarte con tu pareja: sorprendida"
+lay_with_man_nopregnancy.09.desc:0 "\"¿Qué es esto? ¿Velas?\", reflexiona. \"¡Oh, ya veo! Bueno, seguro. Te lo daré solo por el esfuerzo que hiciste.\""
+lay_with_man_nopregnancy.09.a:0 "No es exactamente la reacción que esperaba, pero lo aceptaré".
+lay_with_man_nopregnancy.10.t:0 "Acostarte con tu pareja: poco impresionado"
+lay_with_man_nopregnancy.10.desc:0 "\"¿Ugh?\" suspira, \"Creo que es un poco demasiado, ¿no? ¿Quizás la próxima vez no te esfuerces tanto?\"\n\n\"Pero tomaré el regalo\", sonríe."
+lay_with_man_nopregnancy.10.a:0 "Sí, claro. Limpiaré esto".
+
+# Pone con hembra sin embarazo
+lay_with_woman_nopregnancy.01.t:0 "Acostarte con tu pareja: Preparativos"
+lay_with_woman_nopregnancy.01.desc:0 "Estoy planeando llevar a [recipient.GetShortUINameNoTooltip] a la cama conmigo. Ahora, ¿cómo debo continuar ...\n\nTal vez la espere en la cama cámara con nada más que una rosa entre los dientes. ¡Es hora de divertirnos un poco!\n\n¡O simplemente debería arrastrarla al dormitorio, atarlo y darle un paseo rudo!\n\nTambién podría decorar el toda la habitación con cientos de velas, y espera la luz de la luna perfecta. ¡Un regalo además de eso seguramente hará el truco!"
+lay_with_woman_nopregnancy.01.a:0 "¡Iré a buscar la rosa!"
+lay_with_woman_nopregnancy.01.b:0 "¡Está lista para un viaje difícil!"
+lay_with_woman_nopregnancy.01.c:0 "Iré con velas, luz de luna y regalos."
+lay_with_woman_nopregnancy.01.e:0 "Cambié de opinión".
+# Rosa
+lay_with_woman_nopregnancy.02.t:0 "Acostarte con tu pareja: ¡éxito!"
+lay_with_woman_nopregnancy.02.desc:0 "\"¡Oh! ¿Qué es esto?\" guiña un ojo sonriendo, \"Me gusta a dónde va esto...\""
+lay_with_woman_nopregnancy.02.a:0 "\"Ahora ven aquí...\""
+lay_with_woman_nopregnancy.03.t:0 "Acostarte con tu pareja: resultado aceptable"
+lay_with_woman_nopregnancy.03.desc:0 "\"¿Qué es esto?\" se sorprende. \"¡Oh, ya veo! Bueno, claro, ¿por qué no?\", se encoge de hombros."
+lay_with_woman_nopregnancy.03.a:0 "\"No es el entusiasmo que esperaba. Pero, claro, hagámoslo.\""
+lay_with_woman_nopregnancy.04.t:0 "Acostarse con su pareja: negativa"
+lay_with_woman_nopregnancy.04.desc:0 "\"¿En serio?\" ella no estaba contenta con la sorpresa. \"No tengo tiempo para esto\", dice."
+lay_with_woman_nopregnancy.04.a:0 "\"Bien.\""
+# Áspero
+lay_with_woman_nopregnancy.05.t:0 "Acostarte con tu pareja: ¡éxito!"
+lay_with_woman_nopregnancy.05.desc:0 "La arrastré hasta el dormitorio, la até a los pies de la cama y la follé hasta dejarla sin sentido. Sus gritos deben haber resonado por todos los pasillos durante toda la noche".
+lay_with_woman_nopregnancy.05.a:0 "Espero que [ROOT.Char.GetFaith.HighGodName] no nos haya escuchado con demasiada atención..."
+lay_with_woman_nopregnancy.06.t:0 "Acostarte con tu pareja: buenos resultados"
+lay_with_woman_nopregnancy.06.desc:0 "Me sigue hasta el dormitorio sin saber exactamente qué esperar. Una vez que se le ocurre la idea, duda un poco: \"Está bien, pero no seas demasiado duro conmigo, ¿de acuerdo?\""
+lay_with_woman_nopregnancy.06.a:0 "Por supuesto, cualquier cosa que digas."
+lay_with_woman_nopregnancy.07.t:0 "Acostarse con su pareja: fracaso"
+lay_with_woman_nopregnancy.07.desc:0 "\"¿Adónde crees que me llevas?\" gruñe y no me sigue. Le explico mi plan, que no está ayudando. \"¿En serio? Eso no suena nada divertido en este momento", dice ella.
+lay_with_woman_nopregnancy.07.a:0 "Al menos lo intenté."
+# Regalo
+lay_with_woman_nopregnancy.08.t:0 "Acostarte con tu pareja: ¡Encantado!"
+lay_with_woman_nopregnancy.08.desc:0 "\"¡Oh, no! ¡Esto se ve increíble!\", ella se llena de alegría. Luego le muestro el regalo que le compré. \"¡No! ¡No deberías haberlo hecho!\" ella se derrite en mis brazos."
+lay_with_woman_nopregnancy.08.a:0 "Pasamos una noche increíble juntos".
+lay_with_woman_nopregnancy.09.t:0 "Acostarte con tu pareja: sorprendida"
+lay_with_woman_nopregnancy.09.desc:0 "\"¿Qué es esto? ¿Velas?\", reflexiona. \"¡Oh, ya veo! Bueno, seguro. Te lo daré solo por el esfuerzo que hiciste.\""
+lay_with_woman_nopregnancy.09.a:0 "No es exactamente la reacción que esperaba, pero lo aceptaré".
+lay_with_woman_nopregnancy.10.t:0 "Acostarte con tu pareja: poco impresionado"
+lay_with_woman_nopregnancy.10.desc:0 "\"¿Ugh?\" ella suspira, \"Creo que es un poco demasiado, ¿no? ¿Quizás la próxima vez no te esfuerces tanto?\"\n\n\"Pero aceptaré el regalo\", sonrió."
+lay_with_woman_nopregnancy.10.a:0 "Sí, claro. Limpiaré esto."

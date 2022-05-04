@@ -1,0 +1,17 @@
+﻿laid_with_opinion = {
+	opinion = 5
+	months = 18
+	decaying = yes
+}
+
+laid_with_success_opinion = {
+	opinion = 10
+	months = 12
+	decaying = yes
+}
+
+laid_with_unsuccess_opinion = {
+	opinion = -10
+	months = 12
+	decaying = yes
+}

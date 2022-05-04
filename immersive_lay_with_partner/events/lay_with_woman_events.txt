@@ -1,0 +1,933 @@
+﻿namespace = lay_with_woman
+
+lay_with_woman.01 = {
+	title = lay_with_woman.01.t
+	desc = lay_with_woman.01.desc
+    type = character_event
+	theme = lover_relation
+
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			animation = personality_rational
+		}
+	}
+
+	right_portrait = {
+		character = scope:recipient
+		triggered_animation = {
+			animation = love
+		}
+	}
+
+	option = { # Rose
+		name = lay_with_woman.01.a
+		custom_tooltip = lay_with_woman.01.a.text
+		random_list = {
+			33 = {
+				opinion_modifier = { #Compare Opinion modifier.
+					who = scope:recipient
+					opinion_target = scope:actor
+					multiplier = 1
+				}
+				custom_tooltip = lay_with_partner_chance_tt_pos
+				scope:actor = {
+					add_character_flag = {
+						flag = is_naked
+					}
+				}
+				scope:recipient = {
+					add_character_flag = {
+						flag = is_naked
+					}
+				}
+				trigger_event = {
+					id = lay_with_woman.02
+					days = 1
+				}
+			}
+			34 = {
+				opinion_modifier = { #Compare Opinion modifier.
+					who = scope:recipient
+					opinion_target = scope:actor
+					multiplier = 0.3
+				}
+				custom_tooltip = lay_with_partner_chance_tt_neu
+				scope:actor = {
+					add_character_flag = {
+						flag = is_naked
+					}
+				}
+				scope:recipient = {
+					add_character_flag = {
+						flag = is_naked
+					}
+				}
+				trigger_event = {
+					id = lay_with_woman.03
+					days = 1
+				}
+			}
+			33 = {
+				opinion_modifier = { #Compare Opinion modifier.
+					who = scope:recipient
+					opinion_target = scope:actor
+					multiplier = -0.6
+				}
+				custom_tooltip = lay_with_partner_chance_tt_neg
+				scope:actor = {
+					add_character_flag = {
+						flag = is_naked
+					}
+				}
+				trigger_event = {
+					id = lay_with_woman.04
+					days = 1
+				}
+			}
+		}
+	}
+	option = { # Rough
+		name = lay_with_woman.01.b
+		add_piety = -15
+		random_list = {
+			33 = {
+				opinion_modifier = { #Compare Opinion modifier.
+					who = scope:recipient
+					opinion_target = scope:actor
+					multiplier = 1
+				}
+				custom_tooltip = lay_with_partner_chance_tt_pos
+				scope:actor = {
+					add_character_flag = {
+						flag = is_naked
+					}
+				}
+				scope:recipient = {
+					add_character_flag = {
+						flag = is_naked
+					}
+				}
+				trigger_event = {
+					id = lay_with_woman.05
+					days = 1
+				}
+			}
+			33 = {
+				opinion_modifier = { #Compare Opinion modifier.
+					who = scope:recipient
+					opinion_target = scope:actor
+					multiplier = 0.8
+				}
+				custom_tooltip = lay_with_partner_chance_tt_neu
+				scope:actor = {
+					add_character_flag = {
+						flag = is_naked
+					}
+				}
+				scope:recipient = {
+					add_character_flag = {
+						flag = is_naked
+					}
+				}
+				trigger_event = {
+					id = lay_with_woman.06
+					days = 1
+				}
+			}
+			34 = {
+				opinion_modifier = { #Compare Opinion modifier.
+					who = scope:recipient
+					opinion_target = scope:actor
+					multiplier = -0.25
+				}
+				custom_tooltip = lay_with_partner_chance_tt_neg
+				trigger_event = {
+					id = lay_with_woman.07
+					days = 1
+				}
+			}
+		}
+	}
+	option = { # Candles
+		name = lay_with_woman.01.c
+		remove_short_term_gold = 10
+		random_list = {
+			34 = {
+				opinion_modifier = { #Compare Opinion modifier.
+					who = scope:recipient
+					opinion_target = scope:actor
+					multiplier = 1
+				}
+				custom_tooltip = lay_with_partner_chance_tt_pos
+				scope:actor = {
+					add_character_flag = {
+						flag = is_naked
+					}
+				}
+				scope:recipient = {
+					add_character_flag = {
+						flag = is_naked
+					}
+				}
+				trigger_event = {
+					id = lay_with_woman.08
+					days = 1
+				}
+			}
+			33 = {
+				opinion_modifier = { #Compare Opinion modifier.
+					who = scope:recipient
+					opinion_target = scope:actor
+					multiplier = 0.2
+				}
+				custom_tooltip = lay_with_partner_chance_tt_neu
+				scope:actor = {
+					add_character_flag = {
+						flag = is_naked
+					}
+				}
+				scope:recipient = {
+					add_character_flag = {
+						flag = is_naked
+					}
+				}
+				trigger_event = {
+					id = lay_with_woman.09
+					days = 1
+				}
+			}
+			33 = {
+				opinion_modifier = { #Compare Opinion modifier.
+					who = scope:recipient
+					opinion_target = scope:actor
+					multiplier = -0.55
+				}
+				custom_tooltip = lay_with_partner_chance_tt_neg
+				trigger_event = {
+					id = lay_with_woman.10
+					days = 1
+				}
+			}
+		}
+	}
+	option = { # Ask
+		limit = {
+			OR = {
+				scope:actor = {
+					NOT = {
+						has_trait = pregnant
+					}
+				}
+				scope:recipient = {
+					NOT = {
+						has_trait = pregnant
+					}
+				}
+			}
+		}
+		name = lay_with_woman.01.d
+		custom_tooltip = lay_with_woman.01.d.text
+		random_list = {
+			33 = {
+				opinion_modifier = { #Compare Opinion modifier.
+					who = scope:recipient
+					opinion_target = scope:actor
+					multiplier = 1
+				}
+				custom_tooltip = lay_with_partner_chance_tt_pos
+				scope:actor = {
+					add_character_flag = {
+						flag = is_naked
+					}
+				}
+				scope:recipient = {
+					add_character_flag = {
+						flag = is_naked
+					}
+				}
+				trigger_event = {
+					id = lay_with_woman.11
+					days = 1
+				}
+			}
+			33 = {
+				opinion_modifier = { #Compare Opinion modifier.
+					who = scope:recipient
+					opinion_target = scope:actor
+					multiplier = 0.5
+				}
+				custom_tooltip = lay_with_partner_chance_tt_neu
+				scope:actor = {
+					add_character_flag = {
+						flag = is_naked
+					}
+				}
+				scope:recipient = {
+					add_character_flag = {
+						flag = is_naked
+					}
+				}
+				trigger_event = {
+					id = lay_with_woman.12
+					days = 1
+				}
+			}
+			34 = {
+				opinion_modifier = { #Compare Opinion modifier.
+					who = scope:recipient
+					opinion_target = scope:actor
+					multiplier = -0.3
+				}
+				custom_tooltip = lay_with_partner_chance_tt_neg
+				trigger_event = {
+					id = lay_with_woman.13
+					days = 1
+				}
+			}
+		}
+	}
+	option = { # Cancel
+		name = lay_with_woman.01.e
+		scope:recipient = {
+			remove_opinion = {
+				target = scope:actor
+				modifier = laid_with_opinion
+			}
+		}
+	}
+}
+
+# Rose option positive
+lay_with_woman.02 = {
+	title = lay_with_woman.02.t
+	desc = lay_with_woman.02.desc
+    type = character_event
+	theme = lover_relation
+
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			animation = admiration
+		}
+	}
+
+	right_portrait = {
+		character = scope:recipient
+		triggered_animation = {
+			animation = love
+		}
+	}
+
+	option = {
+		name = lay_with_woman.02.a
+		custom_tooltip = lay_with_partner_result.tt
+		random_list = {
+			90 = {
+			}
+			10 = {
+				scope:recipient = {
+					make_pregnant = { father = scope:actor number_of_children = 1 }
+				}
+				custom_tooltip = lay_with_partner_result_pregnancy.tt
+			}
+		}
+		scope:actor = {
+			remove_character_flag = is_naked
+		}
+		scope:recipient = {
+			remove_character_flag = is_naked
+		}
+	}
+
+	immediate = {
+		scope:actor = {
+			stress_impact = {
+				base = -20
+				chaste = 20
+				lustful = -5
+			}
+		}
+		scope:recipient = {
+			add_opinion = {
+				target = scope:actor
+				modifier = laid_with_success_opinion
+				opinion = 10
+			}
+		}
+	}
+}
+
+# Rose option neutral
+lay_with_woman.03 = {
+	title = lay_with_woman.03.t
+	desc = lay_with_woman.03.desc
+    type = character_event
+	theme = lover_relation
+
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			animation = flirtation
+		}
+	}
+
+	right_portrait = {
+		character = scope:recipient
+		triggered_animation = {
+			animation = happiness
+		}
+	}
+
+	option = {
+		name = lay_with_woman.03.a
+		custom_tooltip = lay_with_partner_result.tt
+		random_list = {
+			90 = {
+			}
+			10 = {
+				scope:recipient = {
+					make_pregnant = { father = scope:actor number_of_children = 1 }
+				}
+				custom_tooltip = lay_with_partner_result_pregnancy.tt
+			}
+		}
+		scope:actor = {
+			remove_character_flag = is_naked
+		}
+		scope:recipient = {
+			remove_character_flag = is_naked
+		}
+	}
+
+	immediate = {
+		scope:actor = {
+			stress_impact = {
+				base = -15
+				chaste = 20
+				lustful = -5
+			}
+		}
+	}
+}
+
+# Rose option negative
+lay_with_woman.04 = {
+	title = lay_with_woman.04.t
+	desc = lay_with_woman.04.desc
+    type = character_event
+	theme = lover_relation
+
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			animation = shame
+		}
+	}
+
+	right_portrait = {
+		character = scope:recipient
+		triggered_animation = {
+			animation = disapproval
+		}
+	}
+
+	option = {
+		name = lay_with_woman.04.a
+		scope:actor = {
+			remove_character_flag = is_naked
+		}
+		scope:recipient = {
+			remove_character_flag = is_naked
+		}
+	}
+
+	immediate = {
+		scope:recipient = {
+			add_opinion = {
+				target = scope:actor
+				modifier = laid_with_unsuccess_opinion
+				opinion = -10
+			}
+		}
+	}
+}
+
+# Rough option positive
+lay_with_woman.05 = {
+	title = lay_with_woman.05.t
+	desc = lay_with_woman.05.desc
+    type = character_event
+	theme = lover_relation
+
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			animation = personality_bold
+		}
+	}
+
+	right_portrait = {
+		character = scope:recipient
+		triggered_animation = {
+			animation = beg
+		}
+	}
+
+	option = {
+		name = lay_with_woman.05.a
+		custom_tooltip = lay_with_partner_result.tt
+		random_list = {
+			75 = {
+				scope:recipient = {
+					make_pregnant = { father = scope:actor number_of_children = 1 }
+				}
+				custom_tooltip = lay_with_partner_result_pregnancy.tt
+			}
+			15 = {
+			}
+		}
+		scope:actor = {
+			remove_character_flag = is_naked
+		}
+		scope:recipient = {
+			remove_character_flag = is_naked
+		}
+	}
+
+	immediate = {
+		scope:actor = {
+			stress_impact = {
+				base = -15
+				chaste = 25
+				lustful = -8
+			}
+		}
+		scope:recipient = {
+			add_opinion = {
+				target = scope:actor
+				modifier = laid_with_success_opinion
+				opinion = 15
+			}
+		}
+		add_piety = -15
+	}
+}
+
+# Rough option neutral
+lay_with_woman.06 = {
+	title = lay_with_woman.06.t
+	desc = lay_with_woman.06.desc
+    type = character_event
+	theme = lover_relation
+
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			animation = personality_compassionate
+		}
+	}
+
+	right_portrait = {
+		character = scope:recipient
+		triggered_animation = {
+			animation = worry
+		}
+	}
+
+	option = {
+		name = lay_with_woman.06.a
+		custom_tooltip = lay_with_partner_result.tt
+		random_list = {
+			75 = {
+				scope:recipient = {
+					make_pregnant = { father = scope:actor number_of_children = 1 }
+				}
+				custom_tooltip = lay_with_partner_result_pregnancy.tt
+			}
+			15 = {
+			}
+		}
+		scope:actor = {
+			remove_character_flag = is_naked
+		}
+		scope:recipient = {
+			remove_character_flag = is_naked
+		}
+	}
+
+	immediate = {
+		scope:actor = {
+			stress_impact = {
+				base = -10
+				chaste = 20
+				lustful = -5
+			}
+		}
+		scope:recipient = {
+			add_opinion = {
+				target = scope:actor
+				modifier = laid_with_success_opinion
+				opinion = 10
+			}
+		}
+	}
+}
+
+# Rough option negative
+lay_with_woman.07 = {
+	title = lay_with_woman.07.t
+	desc = lay_with_woman.07.desc
+    type = character_event
+	theme = lover_relation
+
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			animation = personality_forgiving
+		}
+	}
+
+	right_portrait = {
+		character = scope:recipient
+		triggered_animation = {
+			animation = worry
+		}
+	}
+
+	option = {
+		name = lay_with_woman.07.a
+		scope:actor = {
+			remove_character_flag = is_naked
+		}
+		scope:recipient = {
+			remove_character_flag = is_naked
+		}
+	}
+
+	immediate = {
+		scope:actor = {
+			stress_impact = {
+				base = 5
+				chaste = -10
+				lustful = 5
+			}
+		}
+		scope:recipient = {
+			add_opinion = {
+				target = scope:actor
+				modifier = laid_with_unsuccess_opinion
+				opinion = -10
+			}
+		}
+	}
+}
+
+# Gift option positive
+lay_with_woman.08 = {
+	title = lay_with_woman.08.t
+	desc = lay_with_woman.08.desc
+    type = character_event
+	theme = lover_relation
+
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			animation = personality_zealous
+		}
+	}
+
+	right_portrait = {
+		character = scope:recipient
+		triggered_animation = {
+			animation = flirtation
+		}
+	}
+
+	option = {
+		name = lay_with_woman.08.a
+		custom_tooltip = lay_with_partner_result.tt
+		random_list = {
+			75 = {
+				scope:recipient = {
+					make_pregnant = { father = scope:actor number_of_children = 1 }
+				}
+				custom_tooltip = lay_with_partner_result_pregnancy.tt
+			}
+			15 = {
+			}
+		}
+		scope:actor = {
+			remove_character_flag = is_naked
+		}
+		scope:recipient = {
+			remove_character_flag = is_naked
+		}
+	}
+
+	immediate = {
+		scope:actor = {
+			stress_impact = {
+				base = -10
+				chaste = 5
+				lustful = 10
+			}
+		}
+		scope:recipient = {
+			add_opinion = {
+				target = scope:actor
+				modifier = laid_with_success_opinion
+				opinion = 25
+			}
+		}
+		add_piety = 5
+	}
+}
+
+# Gift option neutral
+lay_with_woman.09 = {
+	title = lay_with_woman.09.t
+	desc = lay_with_woman.09.desc
+    type = character_event
+	theme = lover_relation
+
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			animation = admiration
+		}
+	}
+
+	right_portrait = {
+		character = scope:recipient
+		triggered_animation = {
+			animation = love
+		}
+	}
+
+	option = {
+		name = lay_with_woman.09.a
+		custom_tooltip = lay_with_partner_result.tt
+		random_list = {
+			75 = {
+				scope:recipient = {
+					make_pregnant = { father = scope:actor number_of_children = 1 }
+				}
+				custom_tooltip = lay_with_partner_result_pregnancy.tt
+			}
+			15 = {
+			}
+		}
+		scope:actor = {
+			remove_character_flag = is_naked
+		}
+		scope:recipient = {
+			remove_character_flag = is_naked
+		}
+	}
+
+	immediate = {
+		scope:recipient = {
+			add_opinion = {
+				target = scope:actor
+				modifier = laid_with_success_opinion
+				opinion = 10
+			}
+		}
+	}
+}
+
+# Gift option negative
+lay_with_woman.10 = {
+	title = lay_with_woman.10.t
+	desc = lay_with_woman.10.desc
+    type = character_event
+	theme = lover_relation
+
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			animation = sadness
+		}
+	}
+
+	right_portrait = {
+		character = scope:recipient
+		triggered_animation = {
+			animation = boredom
+		}
+	}
+
+	option = {
+		name = lay_with_woman.10.a
+		scope:actor = {
+			remove_character_flag = is_naked
+		}
+		scope:recipient = {
+			remove_character_flag = is_naked
+		}
+	}
+
+	immediate = {
+		scope:actor = {
+			stress_impact = {
+				base = 5
+				chaste = -10
+				lustful = 5
+			}
+		}
+		scope:recipient = {
+			add_opinion = {
+				target = scope:actor
+				modifier = laid_with_unsuccess_opinion
+				opinion = -10
+			}
+		}
+		add_prestige = -15
+	}
+}
+
+# Ask option positive
+lay_with_woman.11 = {
+	title = lay_with_woman.11.t
+	desc = lay_with_woman.11.desc
+    type = character_event
+	theme = lover_relation
+
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			animation = ecstasy
+		}
+	}
+
+	right_portrait = {
+		character = scope:recipient
+		triggered_animation = {
+			animation = love
+		}
+	}
+
+	option = {
+		name = lay_with_woman.11.a
+		custom_tooltip = lay_with_partner_result.tt
+		random_list = {
+			95 = {
+				scope:recipient = {
+					make_pregnant = { father = scope:actor number_of_children = 1 }
+				}
+				custom_tooltip = lay_with_partner_result_pregnancy.tt
+			}
+			5 = {
+			}
+		}
+		scope:actor = {
+			remove_character_flag = is_naked
+		}
+		scope:recipient = {
+			remove_character_flag = is_naked
+		}
+	}
+
+	immediate = {
+		scope:actor = {
+			stress_impact = {
+				base = -5
+				chaste = 5
+				lustful = -5
+			}
+		}
+		scope:recipient = {
+			add_opinion = {
+				target = scope:actor
+				modifier = laid_with_success_opinion
+				opinion = 15
+			}
+		}
+	}
+}
+
+# Ask option neutral
+lay_with_woman.12 = {
+	title = lay_with_woman.12.t
+	desc = lay_with_woman.12.desc
+    type = character_event
+	theme = lover_relation
+
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			animation = happiness
+		}
+	}
+
+	right_portrait = {
+		character = scope:recipient
+		triggered_animation = {
+			animation = boredom
+		}
+	}
+
+	option = {
+		name = lay_with_woman.12.a
+		custom_tooltip = lay_with_partner_result.tt
+		random_list = {
+			95 = {
+				scope:recipient = {
+					make_pregnant = { father = scope:actor number_of_children = 1 }
+				}
+				custom_tooltip = lay_with_partner_result_pregnancy.tt
+			}
+			5 = {
+			}
+		}
+		scope:actor = {
+			remove_character_flag = is_naked
+		}
+		scope:recipient = {
+			remove_character_flag = is_naked
+		}
+	}
+}
+
+# Ask option negative
+lay_with_woman.13 = {
+	title = lay_with_woman.13.t
+	desc = lay_with_woman.13.desc
+    type = character_event
+	theme = lover_relation
+
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			animation = sadness
+		}
+	}
+
+	right_portrait = {
+		character = scope:recipient
+		triggered_animation = {
+			animation = disgust
+		}
+	}
+
+	option = {
+		name = lay_with_woman.13.a
+		scope:actor = {
+			remove_character_flag = is_naked
+		}
+		scope:recipient = {
+			remove_character_flag = is_naked
+		}
+	}
+
+	immediate = {
+		scope:recipient = {
+			add_opinion = {
+				target = scope:actor
+				modifier = laid_with_unsuccess_opinion
+				opinion = -10
+			}
+		}
+	}
+}

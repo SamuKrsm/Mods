@@ -1,0 +1,254 @@
+﻿lay_with_woman_interaction = {
+	category = interaction_category_friendly
+	use_diplomatic_range = yes
+
+	desc = lay_with_woman_interaction_desc
+
+	is_shown = {
+		scope:actor = {
+		    age > 15
+			fertility > 0
+			is_imprisoned = no
+			is_female = no
+		}
+		scope:recipient = {
+			OR = {
+				is_spouse_of = scope:actor
+				is_concubine_of = scope:actor
+				has_relation_lover = scope:actor
+				has_relation_soulmate = scope:actor
+			}
+            age > 15
+			fertility > 0
+			is_adult = yes
+			is_imprisoned = no
+			is_female = yes
+			NOT = {
+				has_trait = pregnant
+				has_opinion_modifier = {
+					target = scope:actor
+					modifier = laid_with_opinion
+				}
+			}
+		}
+	}
+
+	ai_accept = {
+		base = -25
+		
+		modifier = { # Lustful
+			desc = lay_with_partner_aibehavior_lustful_tt
+			scope:recipient = {
+				has_trait = lustful
+			}
+			add = 20
+		}
+
+		modifier = { # Chaste
+			desc = lay_with_partner_aibehavior_chaste_tt
+			scope:recipient = {
+				has_trait = chaste
+			}
+			add = -15
+		}
+
+		modifier = { # I am Impotent
+			desc = lay_with_partner_aibehavior_impotentme_tt
+			scope:actor = {
+				has_trait = impotent
+			}
+			add = -5
+		}
+
+		modifier = { # They are Impotent
+			desc = lay_with_partner_aibehavior_impotentthey_tt
+			scope:recipient = {
+				has_trait = impotent
+			}
+			add = -15
+		}
+
+		modifier = { # I am Ill
+			desc = lay_with_partner_aibehavior_illme_tt
+			scope:actor = {
+				has_trait = ill
+			}
+			add = -25
+		}
+
+		modifier = { # They are Ill
+			desc = lay_with_partner_aibehavior_illthey_tt
+			scope:recipient = {
+				has_trait = ill
+			}
+			add = -20
+		}
+
+		modifier = { # I have Pneumonia
+			desc = lay_with_partner_aibehavior_pneumonicme_tt
+			scope:actor = {
+				has_trait = pneumonic
+			}
+			add = -40
+		}
+
+		modifier = { # They have Pneumonia
+			desc = lay_with_partner_aibehavior_pneumonicthey_tt
+			scope:recipient = {
+				has_trait = pneumonic
+			}
+			add = -30
+		}
+
+		modifier = { # I have Lover's Pox
+			desc = lay_with_partner_aibehavior_loverspoxme_tt
+			scope:actor = {
+				has_trait = lovers_pox
+			}
+			add = -40
+		}
+
+		modifier = { # They have Lover's Pox
+			desc = lay_with_partner_aibehavior_loverspoxthey_tt
+			scope:recipient = {
+				has_trait = lovers_pox
+			}
+			add = -15
+		}
+
+		modifier = { # I am Celibate
+			desc = lay_with_partner_aibehavior_celibateme_tt
+			scope:actor = {
+				has_trait = celibate
+			}
+			add = -100
+		}
+
+		modifier = { # They are Celibate
+			desc = lay_with_partner_aibehavior_celibatethey_tt
+			scope:recipient = {
+				has_trait = celibate
+			}
+			add = -100
+		}
+
+		modifier = { #I am a King!
+			desc = lay_with_partner_aibehavior_amking_tt
+			trigger = {
+				scope:actor = { highest_held_title_tier = tier_kingdom }
+			}
+			add = 10
+		}
+
+		modifier = { #I am an Emperor!
+			desc = lay_with_partner_aibehavior_amking_tt
+			trigger = {
+				scope:actor = { highest_held_title_tier = tier_empire }
+			}
+			add = 20
+		}
+
+		modifier = { #Friend modifier.
+			desc = offer_vassalization_interaction_aibehavior_friend_tt
+			trigger = {
+				scope:recipient = {
+					has_relation_friend = scope:actor
+					NOT = { has_relation_best_friend = scope:actor }
+				}
+			}
+			add = 10
+		}
+		modifier = { #Best Friend modifier.
+			desc = offer_vassalization_interaction_aibehavior_best_friend_tt
+			trigger = {
+				scope:recipient = {
+					has_relation_best_friend = scope:actor
+				}
+			}
+			add = 20
+		}
+		modifier = { #Rivalry modifier.
+			desc = offer_vassalization_interaction_aibehavior_rival_tt
+			trigger = {
+				scope:recipient = {
+					has_relation_rival = scope:actor
+					NOT = { has_relation_nemesis = scope:actor }
+				}
+			}
+			add = -15
+		}
+		modifier = { #Nemesis modifier.
+			desc = offer_vassalization_interaction_aibehavior_nemesis_tt
+			trigger = {
+				scope:recipient = {
+					has_relation_nemesis = scope:actor
+				}
+			}
+			add = -100
+		}
+		modifier = { #Cultural modifiers.
+			desc = offer_vassalization_interaction_aibehavior_culture_tt
+			trigger = {
+				scope:actor = {
+					has_same_culture_group_as = scope:recipient
+					NOT = { has_same_culture_as = scope:recipient }
+				}
+			}
+			add = -5
+		}
+		
+		modifier = { #Cultural Group modifiers.
+			desc = offer_vassalization_interaction_aibehavior_culture_group_tt
+			trigger = {
+				scope:actor = {
+					NOT = { has_same_culture_group_as = scope:recipient }
+				}
+			}
+			add = -10
+		}
+
+		# OPINION INFLUENCE
+		modifier = {
+			add = intimidated_external_reason_value
+			scope:recipient = {
+				has_dread_level_towards = {
+					target = scope:actor
+					level = 1
+				}
+			}
+			desc = INTIMIDATED_REASON
+		}
+		modifier = {
+			add = cowed_external_reason_value
+			scope:recipient = {
+				has_dread_level_towards = {
+					target = scope:actor
+					level = 2
+				}
+			}
+			desc = COWED_REASON
+		}
+		opinion_modifier = { #Compare Opinion modifier.
+			who = scope:recipient
+			opinion_target = scope:actor
+			multiplier = 0.9
+		}
+	}
+
+	on_accept = {
+		scope:actor = {
+			trigger_event = lay_with_woman.01
+			stress_impact = {
+				chaste = 10
+				lustful = -10
+			}
+		}
+		scope:recipient = {
+			add_opinion = {
+				target = scope:actor
+				modifier = laid_with_opinion
+				opinion = 5
+			}
+		}
+	}
+}

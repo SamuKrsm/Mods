@@ -1,0 +1,42 @@
+Events
+	Unit - A unit Starts the effect of an ability
+Conditions
+	(Ability being cast) Equal to Explosive Blast
+Actions
+	Set CastingUnit = (Triggering unit)
+	Set TempHandle = (Triggering unit)
+	Set ExplosiveBlast_Casts = (Load (Key casts) of (Key TempHandle) from ExplosiveBlastTable)
+	Set ExplosiveBlast_CurrentlyActive = (Load (Key currentlyActive) of (Key TempHandle) from ExplosiveBlastTable)
+	If (All Conditions are True) then do (Then Actions) else do (Else Actions)
+		If - Conditions
+			ExplosiveBlast_Casts Less than ExplosiveBlast_CastsMax
+		Then - Actions
+			If (All Conditions are True) then do (Then Actions) else do (Else Actions)
+				If - Conditions
+					ExplosiveBlast_ResetDelay Equal to True
+				Then - Actions
+					Hashtable - Save ExplosiveBlast_Delay as (Key delay) of (Key TempHandle) in ExplosiveBlastTable
+				Else - Actions
+					If (All Conditions are True) then do (Then Actions) else do (Else Actions)
+						If - Conditions
+							ExplosiveBlast_CurrentlyActive Equal to False
+						Then - Actions
+							Hashtable - Save ExplosiveBlast_Delay as (Key delay) of (Key TempHandle) in ExplosiveBlastTable
+						Else - Actions
+			Hashtable - Save (ExplosiveBlast_Casts + 1) as (Key casts) of (Key TempHandle) in ExplosiveBlastTable
+			Set ExplosiveBlast_TempExplosions = (Load (Key explosions) of (Key TempHandle) from ExplosiveBlastTable)
+			If (All Conditions are True) then do (Then Actions) else do (Else Actions)
+				If - Conditions
+					(ExplosiveBlast_BlastsInc + ExplosiveBlast_BlastsIncPerLvl) Greater than 0
+					ExplosiveBlast_CurrentlyActive Equal to True
+				Then - Actions
+					Hashtable - Save (ExplosiveBlast_BlastsInc + ((ExplosiveBlast_BlastsIncPerLvl x (Level of Explosive Blast for CastingUnit)) + ExplosiveBlast_TempExplosions)) as (Key explosions) of (Key TempHandle) in ExplosiveBlastTable
+				Else - Actions
+					Hashtable - Save (ExplosiveBlast_BlastsBase + ((ExplosiveBlast_BlastsPerLvl x (Level of Explosive Blast for CastingUnit)) + ExplosiveBlast_TempExplosions)) as (Key explosions) of (Key TempHandle) in ExplosiveBlastTable
+			Special Effect - Create a special effect attached to the origin of CastingUnit using ExplosiveBlast_SFXcast
+			Special Effect - Destroy (Last created special effect)
+			Special Effect - Destroy (Load (Key castSFX) of (Key TempHandle) in ExplosiveBlastTable)
+			Special Effect - Create a special effect attached to the chest of CastingUnit using ExplosiveBlast_SFXactive
+			Hashtable - Save Handle Of(Last created special effect) as (Key castSFX) of (Key TempHandle) in ExplosiveBlastTable
+			Unit Group - Add CastingUnit to ExplosiveBlastGroup
+		Else - Actions

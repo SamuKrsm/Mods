@@ -1,0 +1,46 @@
+Events
+	Time - Every 0.10 seconds of game time
+Conditions
+Actions
+	Unit Group - Pick every unit in ExplosiveBlastGroup and do (Actions)
+		Loop - Actions
+			Set CastingUnit = (Picked unit)
+			Set TempHandle = (Picked unit)
+			Set ExplosiveBlast_TempDelay = (Load (Key delay) of (Key TempHandle) from ExplosiveBlastTable)
+			Set ExplosiveBlast_Explosions = (Load (Key explosions) of (Key TempHandle) from ExplosiveBlastTable)
+			Hashtable - Save True as (Key currentlyActive) of (Key TempHandle) in ExplosiveBlastTable
+			If (All Conditions are True) then do (Then Actions) else do (Else Actions)
+				If - Conditions
+					ExplosiveBlast_TempDelay Greater than 0.00
+				Then - Actions
+					Hashtable - Save (ExplosiveBlast_TempDelay - 0.10) as (Key delay) of (Key TempHandle) in ExplosiveBlastTable
+				Else - Actions
+					If (All Conditions are True) then do (Then Actions) else do (Else Actions)
+						If - Conditions
+							ExplosiveBlast_Explosions Greater than 0
+						Then - Actions
+							Hashtable - Save (ExplosiveBlast_Explosions - 1) as (Key explosions) of (Key TempHandle) in ExplosiveBlastTable
+							Hashtable - Save ExplosiveBlast_BlastInterval as (Key delay) of (Key TempHandle) in ExplosiveBlastTable
+							Set ExplosiveBlast_TempManaCost = (ExplosiveBlast_ManaCostBase + ((ExplosiveBlast_ManaCostPerLvl x (Real((Level of Explosive Blast for CastingUnit)))) + (ExplosiveBlast_ManaCostPerCast x (Real((Load (Key casts) of (Key TempHandle) from ExplosiveBlastTable))))))
+							If (All Conditions are True) then do (Then Actions) else do (Else Actions)
+								If - Conditions
+									(Mana of CastingUnit) Greater than or equal to ExplosiveBlast_TempManaCost
+								Then - Actions
+									Unit - Set mana of CastingUnit to ((Mana of CastingUnit) - ExplosiveBlast_TempManaCost)
+									Set TempPoint = (Position of CastingUnit)
+									Special Effect - Create a special effect at TempPoint using ExplosiveBlast_SFXblast
+									Special Effect - Set Scale of (Last created special effect) to ExplosiveBlast_SFXblastScale
+									Special Effect - Destroy (Last created special effect)
+									Custom script: set bj_wantDestroyGroup = true
+									Unit Group - Pick every unit in (Units within (ExplosiveBlast_RadiusBase + (ExplosiveBlast_RadiusPerLvl x (Real((Level of Explosive Blast for CastingUnit))))) of TempPoint) and do (Actions)
+										Loop - Actions
+											Set AttackedUnit = (Picked unit)
+											Trigger - Run Explosive Blast Targets Allowed <gen> (checking conditions)
+									Custom script: call RemoveLocation(udg_TempPoint)
+								Else - Actions
+									Special Effect - Create a special effect attached to the origin of CastingUnit using ExplosiveBlast_SFXnomana
+									Special Effect - Destroy (Last created special effect)
+						Else - Actions
+							Special Effect - Destroy (Load (Key castSFX) of (Key TempHandle) in ExplosiveBlastTable)
+							Unit Group - Remove CastingUnit from ExplosiveBlastGroup
+							Hashtable - Clear all child hashtables of child (Key TempHandle) in ExplosiveBlastTable
